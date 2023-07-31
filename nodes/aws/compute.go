@@ -192,6 +192,11 @@ func (c *computeContainer) Ec2(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *computeContainer) AppRunner(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/compute/app-runner.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *computeContainer) ThinkboxFrostRounded(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/compute/thinkbox-frost-rounded.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
